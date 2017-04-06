@@ -1,0 +1,197 @@
+page-details {
+
+	.scroll-content {
+		padding: 0;
+	}
+
+	.item-block {
+		padding: 0;
+
+		.item-inner {
+			padding: 0 !important;
+
+			.label {
+				margin: 0;
+			}
+
+			.thumb {
+				position: relative;
+				font-size: 0;
+
+				&:after {
+					content: "";
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background: linear-gradient(rgba(#fff, 0), 80%, rgba(map-get($colors, primary), 0.8));
+					z-index: 1;
+				}
+
+				img {
+					width: 100%;
+				}
+
+				h1 {
+					color: #fff;
+					font-size: 14px;
+					z-index: 2;
+					position: absolute;
+					left: 10px;
+					bottom: 10px;
+					white-space: normal;
+				}
+			}
+
+			.action-bar {
+				min-height: 70px;
+				border-bottom: 1px solid #ccc;
+				position: relative;
+				display: block;
+
+				> div {
+					line-height: 70px;
+					font-size: 13px;
+					text-align: center;
+					width: 33.333%;
+					float: left;
+				}
+
+				ion-icon {
+					color: map-get($colors, primary) !important;
+					font-size: 30px;
+					vertical-align: middle;
+				}
+
+				.count {
+					font-size: 10px;
+				    color: #fff !important;
+				    font-weight: bold;
+				    margin-top: 0px;
+				    position: relative;
+				    top: -10px;
+				    width: 20px;
+				    height: 20px;
+				    border-radius: 100%;
+				    background:  map-get($colors, primary) !important;
+				    display: inline-block;
+				    line-height: 20px;
+
+				    &:before {
+				    	content: "+";
+				    	display: inline-block;
+				    	font-size: 10px;
+				    }
+				}
+			}
+
+			.ingredients {
+
+				.shopping-list {
+					float: right;
+
+					.button {
+						box-shadow: none;
+						height: 50px;
+						border-radius: 3px;
+						font-weight: bold;
+					}
+
+					.icon {
+						display: inline-block;
+						color: #fff;
+						vertical-align: middle;
+						font-size: 30px;
+					}
+				}
+
+				h1 {
+					font-size: 14px;
+					font-weight: bold;
+					color: #333;
+					padding: 0 10px;
+					margin-top: 20px;
+					float: left;
+				}
+
+				ul {
+					clear: both;
+					list-style-type: none;
+					padding: 0 20px;
+					margin: 10px 0;
+
+					li {
+						border-bottom: 1px solid #ccc;
+						font-size: 14px;
+						color: #333;
+						font-weight: 600;
+						line-height: normal;
+						white-space: pre-line;
+						padding: 7px 0;
+					}
+				}
+			}
+
+			.method {
+				padding: 0 10px;
+
+				h1 {
+					font-size: 14px;
+					padding-bottom: 20px;
+					border-bottom: 1px solid #ccc;
+					margin: 20px 0;
+					font-weight: bold;
+					color: #333;
+					width: 100%;
+				}
+
+				.button {
+					background: map-get($colors, primary);
+					line-height: 40px;
+					color: #fff;
+					height: 40px;
+					font-size: 14px;
+					font-weight: bold;
+				}
+			}
+
+			.reviews,
+			.related,
+			.map {
+
+				h1 {
+					font-size: 14px;
+					padding-bottom: 20px;
+					border-bottom: 1px solid #ccc;
+					margin: 20px 10px;
+					font-weight: bold;
+					color: #333;
+					width: 100%;
+				}
+			}
+
+			.map .inner {
+				padding: 0 10px;
+
+				.button {
+					width: 49%;
+				    margin-right: 2%;
+				    height: 40px;
+				    margin-bottom: 10px;
+					background: map-get($colors, primary);
+					color: #fff;
+
+					&.supermarket {
+						margin-right: 0;
+					}
+				}
+
+				#map {
+			        width: 100%;
+			        height: 300px;
+			    }
+		    }
+		}
+	}
+}

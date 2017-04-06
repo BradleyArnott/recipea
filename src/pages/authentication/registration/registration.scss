@@ -1,0 +1,67 @@
+page-registration {
+
+	ion-content .scroll-content {
+		background-color: map-get($colors, primary);
+	}
+
+	.back {
+		background: none;
+		box-shadow: none;
+		position: absolute;
+		left: 10px;
+		color: #333;
+		padding: 0;
+		margin: 0;
+		height: 100%;
+
+		&.activated {
+			background: none;
+		}
+
+		&.button-md:hover:not(.disable-hover) {
+			background: none;
+			box-shadow: none;
+		}
+	}
+
+	.item.item {
+		background: transparent;
+		color: #fff;
+
+		.label {
+			color: #fff;
+		}
+
+		p {
+			color: #fff;
+			float: left;
+			font-style: italic;
+		}
+
+		&.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner,
+		&.item-input.input-has-focus .item-inner {
+			border-bottom: 1px solid transparent !important;
+			box-shadow: inset 0 -1px 0 0 #fff;
+		}
+
+		&.input-has-focus .label-md[stacked] {
+			color: #fff;
+		}
+	}
+
+	.button:not(.facebook) {
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: bold;
+		background: #fff;
+		color: map-get($colors, primary);
+		border: 1px solid #fff;
+
+		&.activated {
+			color: #fff;
+			background: transparent;
+			box-shadow: none;
+		}
+	}
+
+}

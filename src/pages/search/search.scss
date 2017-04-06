@@ -1,0 +1,183 @@
+
+page-search {
+
+	.scroll-content {
+		padding: 0 !important;
+	}
+
+	.searchbar {
+		margin-bottom: 10px;
+	}
+
+	.tag-container {
+		padding: 0 20px;
+		position: relative;
+		z-index: 100;
+		background: #fff;
+	}
+
+	.tag {
+	    padding: 7px;
+	    background: map-get($colors, primary);
+	    display: inline-block;
+	    color: #fff;
+	    border-radius: 3px;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	    font-size: 13px;
+	    margin: 0 5px 10px 0;
+
+	    p {
+	    	display: inline-block;
+	    	margin: 0;
+	    	vertical-align: middle;
+	    }
+
+	    .icon {
+	    	vertical-align: middle;
+	    }
+	}
+
+
+	.list {
+		position: relative;
+		z-index: 100;
+		background: #fff;
+
+
+		.item {
+			padding: 0;
+			font-size: 0;
+			margin-bottom: 1px;
+			width: 50%;
+			display: inline-block;
+
+			.item-inner {
+				padding: 0;
+				border: none;
+				margin: 0 1px 0 0;
+			}
+
+			&:nth-child(2n) {
+
+				.item-inner {
+					margin-right: 0;
+				}
+			}
+
+			.label {
+				margin: 0;
+				white-space: initial;
+			}
+
+			.thumb {
+				width: 100%;
+				height: 140px;
+				position: relative;
+				overflow: hidden;
+
+				img {
+					width: 220px;
+					max-width: none;
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+
+			.item-text {
+				width: 100%;
+				padding: 10px;
+				position: relative;
+
+				.title h1 {
+					font-size: 14px;
+					color: map-get($colors, primary);
+					font-weight: bold;
+					display: -webkit-box;
+				    -webkit-line-clamp: 2;
+				    -webkit-box-orient: vertical;
+				    overflow: hidden;
+				    text-overflow: ellipsis;
+				    min-height: 33px;
+				}
+
+				p {
+					color: #333;
+					font-size: 12px;
+				}
+			}
+
+			.time p {
+				line-height: 24px;
+				margin: 0;
+			}
+
+			.ingredients p {
+				font-weight: bold;
+				line-height: 27px;
+			}
+
+			ul {
+			  padding: 0px;
+
+			  &.rating li {
+			    padding: 5px 0;
+			    background: none;
+			    color: map-get($colors, primary);
+
+			    ion-icon {
+			      font-size: 20px;
+			    }
+			  }
+			}
+
+			.course {
+				text-align: center;
+				min-height: 29px;
+
+				p {
+					background: map-get($colors, primary);
+					border-radius: 4px;
+					padding: 3px 5px;
+					color: #fff;
+					font-size: 10px;
+				}
+
+				p:empty {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.text:not(.list) {
+		text-align: center;
+		margin: 45px auto 0;
+		width: 87%;
+
+		h1 {
+			text-transform: uppercase;
+			color: map-get($colors, primary);
+			font-weight: bold;
+		}
+
+		.highlighted {
+			background: map-get($colors, primary);
+			border-radius: 3px;
+			padding: 5px;
+			color: #fff;
+			font-weight: bold;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+	}
+
+	.fridge-icon {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+	}
+}

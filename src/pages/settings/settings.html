@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <img class="logo" src="images/logo.png" alt="">
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="userFormBuilder" (ngSubmit)="updateUserSettings()">
+      <ion-list>
+        <ion-item class="header">
+        <ion-label>{{userDetails.fullName}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </form>
+  <div class="heading" *ngIf="!favorites?.length < 1">
+    <h1>Your Saved Recipes</h1>
+  </div>
+  <template ngFor let-api [ngForOf]="favorites">
+    <ion-item (click)="goToDetails(api?.id)">
+      <div class="thumb">
+        <img src="{{api?.images[0].hostedLargeUrl}}">
+      </div>
+      <div class="text">
+        <div class="inner">
+          <div class="title">
+            <h1>{{api?.name}}</h1>
+          </div>
+          <div class="rating">
+            <rating [(ngModel)]="api.rating"></rating>
+          </div>
+          <div class="time">
+            <p>{{api?.totalTimeInSeconds | HoursMinutesSeconds}} minutes</p>
+          </div>
+          <div class="ingredients">
+            <p>{{api?.ingredients}} Ingredients</p>
+          </div>
+        </div>
+      </div>
+    </ion-item>
+  </template>
+  <div class="text icon" *ngIf="favorites?.length < 1">
+    <img class="heart-icon" src="assets/icon/heart.svg">
+    <p>This is where your favorites will appear. Save them for later and have fun!</p>
+  </div>
+  <button type="submit" full ion-button block (click)="logout()">Logout</button>
+</ion-content>

@@ -1,0 +1,24 @@
+
+.header {
+	.toolbar-content {
+		text-align: center;
+		min-height: 57px;
+	}
+
+	.logo {
+		width: 120px;
+	    margin: 0 auto;
+	    text-align: center;
+	    display: inline-block;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin-top: 8px;
+	    transform: translate(-50%, -50%);
+	}
+
+	// &:after {
+	// 	display: none;
+	// }
+
+}

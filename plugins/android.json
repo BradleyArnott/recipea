@@ -1,0 +1,63 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-3dtouch": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1870622199816927",
+            "APP_NAME": "Recipea",
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-googleplus": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-nativestorage": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        },
+        "cordova-plugin-webserver": {
+            "PACKAGE_NAME": "com.ionicframework.tastem8672885"
+        }
+    }
+}

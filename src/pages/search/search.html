@@ -1,0 +1,53 @@
+<!--
+  Generated template for the Search page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <img class="logo" src="images/logo.png" alt="">
+  </ion-navbar>
+</ion-header> 
+
+<ion-content padding>
+    <form [formGroup]="myForm">
+      <ion-searchbar formControlName="tags"  type="text" placeholder="Enter your ingredients"></ion-searchbar>
+    </form>
+    
+    <div class="tag-container">
+      <span class="tag" (click)="deleteTag(tag)" *ngFor="let tag of tags">
+        <p>{{ tag }}</p>
+        <ion-icon name="close"></ion-icon>
+      </span>
+    </div>
+
+    <ion-list>
+      <ion-item *ngFor="let item of recipes" (click)="goToDetails(item.id)">
+        <div class="thumb">
+          <img src="{{item.smallImageUrls}}">
+        </div>
+        <div class="item-text">
+          <div class="inner">
+            <div class="title">
+              <h1>{{item.recipeName}}</h1>
+            </div>
+            <div class="rating">
+              <rating [(ngModel)]="item.rating"></rating>
+            </div>
+            <div class="time">
+              <p>{{item.totalTimeInSeconds | HoursMinutesSeconds}} minutes</p>
+            </div>
+            <div class="ingredients">
+              <p>{{item.ingredients.length}} Ingredients</p>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  <div class="text" *ngIf="tags?.length < 1">
+    <img class="fridge-icon" src="assets/icon/refrigerator.svg">
+    <p>Find recipes with all your ingredients from your fridge, cupboards and even leftovers.</p>
+    <p>Use a <span class="highlighted">!</span> to exclude ingredients. E.g. <span class="highlighted">!Egg</span></p>
+	</div>
+</ion-content>

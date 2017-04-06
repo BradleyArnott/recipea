@@ -1,0 +1,55 @@
+page-intro {
+	z-index: 9999999;
+
+	.fixed-content,
+	.scroll-content {
+		margin-bottom: 0 !important;
+		z-index: 99999999;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: #fff;
+	}
+
+	.slide-1 {
+		background: #27afb7
+	}
+
+	.slide-2 {
+		background: #f55b5c;
+	}
+
+	.slide-3 {
+		background: #3498db;
+	}
+
+	.swiper-slide {
+		color: #fff; 
+
+		h1 {
+			font-weight: bold;
+		}
+
+		p {
+			max-width: 90%;
+			margin: 0 auto;
+		}
+
+		img {
+			width: 60%;
+		}
+	}
+
+	.button {
+		margin-top: 20px;
+		color: #fff;
+		border-color: #fff;
+
+		&.skip {
+			position: absolute;
+			top: 0;
+			right: 40px;
+		}
+	}
+
+}

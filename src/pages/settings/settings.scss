@@ -1,0 +1,175 @@
+page-settings {
+
+	.scroll-content {
+		padding: 0 !important;
+	}
+
+	form .list {
+		margin-bottom: 0;
+		position: relative;
+		border-bottom: 1px solid #fff;
+	}
+
+	.item.header {
+		padding: 0;
+	    text-align: center;
+	    background: #99BF4B;
+	    line-height: 120px;
+	    color: #fff;
+	    text-transform: uppercase;
+	    font-weight: bold;
+
+	    .item-inner {
+	    	padding: 0 !important;
+
+	    	.label {
+	    		margin: 0;
+	    	}
+	    }
+	}
+
+	.heading {
+		text-align: center;
+
+		h1 {
+			background: #99BF4B;
+			padding: 20px 0;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 14px;
+			color: #fff;
+			margin: 0 0 10px !important;
+		}
+	}
+
+	.item:not(.header) {
+		padding: 0;
+		font-size: 0;
+		margin-bottom: 1px;
+		width: 50%;
+		display: inline-block;
+		float: left;
+
+		.item-inner {
+			padding: 0;
+			border: none;
+			margin: 0 1px 0 0;
+		}
+
+		&:nth-child(2n) {
+
+			.item-inner {
+				margin-right: 0;
+			}
+		}
+
+		.label {
+			margin: 0;
+			white-space: initial;
+		}
+
+		.thumb {
+			width: 100%;
+			height: 116px;
+			position: relative;
+			overflow: hidden;
+
+			ion-img {
+				min-width: 220px;
+				min-height: 140px;
+				max-width: none;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		.text {
+			width: 100%;
+			padding: 10px;
+			position: relative;
+
+			.title h1 {
+				font-size: 14px;
+				color: map-get($colors, primary);
+				font-weight: bold;
+				display: -webkit-box;
+			    -webkit-line-clamp: 2;
+			    -webkit-box-orient: vertical;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    min-height: 50px;
+			}
+
+			p {
+				color: #333;
+				font-size: 12px;
+			}
+		}
+
+		.time p {
+			line-height: 24px;
+			margin: 0;
+		}
+
+		.ingredients p {
+			font-weight: bold;
+			line-height: 27px;
+		}
+
+		ul {
+		  padding: 0px;
+
+		  &.rating li {
+		    padding: 5px 0;
+		    background: none;
+		    color: map-get($colors, primary);
+
+		    ion-icon {
+		      font-size: 20px;
+		    }
+		  }
+		}
+
+		.course {
+			text-align: center;
+			min-height: 29px;
+
+			p {
+				background: map-get($colors, primary);
+				border-radius: 4px;
+				padding: 3px 5px;
+				color: #fff;
+				font-size: 10px;
+			}
+
+			p:empty {
+				display: none;
+			}
+		}
+	}
+
+	.text.icon {
+		text-align: center;
+		margin: 15px auto 0;
+		width: 87%;
+
+		h1 {
+			text-transform: uppercase;
+			color: map-get($colors, primary);
+			font-weight: bold;
+		}
+	}
+
+	.heart-icon {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+	}
+}

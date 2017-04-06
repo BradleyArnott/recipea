@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ShoppingList page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  	<img class="logo" src="images/logo.png" alt="">
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+	<template ngFor let-api [ngForOf]="shoppingList">
+		<ion-card>
+			<ion-card-header>
+				{{api?.name}}
+			</ion-card-header>
+			<ion-list inset>
+				<ion-item *ngFor="let ingredient of api.ingredientLines">
+					<ion-label>{{ ingredient }}</ion-label>
+					<ion-checkbox item-right></ion-checkbox>
+				</ion-item>
+			</ion-list>
+			<button ion-button block full color="danger" (click)="clear(api)">Remove</button>
+		</ion-card>
+	</template>
+
+	<div class="text" *ngIf="shoppingList?.length < 1">
+    	<img class="shopping-icon" src="assets/icon/shopping-list.svg">
+    	<p>This is your shopping list, add recipes and shop away!</p>
+	</div>
+</ion-content>

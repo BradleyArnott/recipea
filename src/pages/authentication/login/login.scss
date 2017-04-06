@@ -1,0 +1,102 @@
+page-login {
+
+	.scroll-content {
+		background: map-get($colors, primary);
+	}
+
+	.logo {
+		padding-top: 20%;
+		width: 70%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	form .item-input.item-block {
+		background: none;
+
+		.item-inner {
+			padding: 0;
+			border-bottom: 1px solid #fff;
+
+			ion-input input {
+				color: #fff;
+				font-family: $font-family-base;
+				padding-left: 20px;
+
+				&::placeholder {
+					color: #fff;
+				}
+			}
+		}
+
+		&.ng-touched .item-inner,
+		&.input-has-focus .item-inner {
+			border-bottom: 1px solid #fff;
+		}
+	}
+
+	.form-error-list {
+		background: none;
+		box-shadow: none;
+
+		.item-inner {
+			background: none;
+		}
+
+		p {
+			color: red;
+		}
+	}
+
+	.sign-up,
+	.password {
+		position: relative;
+
+		ion-icon {
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #fff;
+			font-size: 35px;
+		}
+	}
+
+	.login-button,
+	.create-account {
+		width: 100%;
+		box-shadow: none;
+	}
+
+	.noPass {
+		margin-top: 50px;
+		color: #fff;
+	}
+
+	.button:not(.facebook) {
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: bold;
+		background: #fff;
+		color: map-get($colors, primary);
+		border: 1px solid #fff;
+
+		&.activated {
+			color: #fff;
+			background: transparent;
+			box-shadow: none;
+		}
+	}
+
+	.facebook {
+		background: #3B5998;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: bold;
+
+		&.activated {
+			background: #3B5998 !important;
+			color: #fff;
+		}
+	}
+}
